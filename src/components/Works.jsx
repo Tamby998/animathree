@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import anime from 'animejs'
 
 const data = [
   "Web Design",
@@ -36,7 +35,7 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
- font-size: 100px;
+ font-size: 90px;
  font-weight: bold;
  cursor: pointer;
  color: transparent;
@@ -48,7 +47,7 @@ const ListItem = styled.li`
 }
 
  ::after{
-    content: "${props => props.text}";
+    content: "${(props) => props.text}";
     position: absolute;
     top: 0;
     left: 0;
@@ -60,17 +59,16 @@ const ListItem = styled.li`
 
  &:hover{
     ::after{
-      animation: moveText 0.5s linear;
-    }
- }
+      animation: moveText 0.5s linear both;
 
- @keyframes moveText{
-    to{
-      width: 100px;
+      @keyframes moveText{
+        to{
+          width: 100px;
+        }
+     }
     }
  }
 `
-
 
 const Right = styled.div`
   flex: 1;
