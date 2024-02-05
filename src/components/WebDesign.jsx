@@ -2,7 +2,7 @@ import React from "react";
 
 const WebDesign = () => {
     return (
-        <div>Test</div>
+        <div>WebDesign</div>
     )
 }
 
